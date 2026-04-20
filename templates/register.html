@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+    body {
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+        margin: 0;
+    }
+
+    .register-box {
+        background: #1e293b;
+        padding: 50px;
+        border-radius: 20px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .register-box h2 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+
+    .register-box input {
+        width: 100%;
+        padding: 14px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #e2e8f0;
+    }
+
+    .register-box button {
+        width: 100%;
+        padding: 14px;
+        background: #22c55e;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+
+    .register-box button:hover {
+        background: #16a34a;
+        transform: scale(1.05);
+    }
+
+    .register-box p {
+        color: #cbd5f5;
+        margin-top: 18px;
+        font-size: 15px;
+    }
+
+    .register-box a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .register-box a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+
+<div class="register-box">
+    <h2>Register</h2>
+
+   <form method="POST" onsubmit="return validatePassword()">
+    <input type="text" name="name" placeholder="Enter Name" required
+           oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')">
+
+    <input type="email" name="email" placeholder="Enter Email" required>
+
+    <input type="text" name="phone" placeholder="Enter Mobile Number" required
+           maxlength="10"
+           oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+
+    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+    <button type="submit">Register</button>
+    </form>
+    <p>Already have account? <a href="/login">Login</a></p>
+</div>
+
+<script>
+function validateName() {
+    let name = document.querySelector('input[name="name"]').value;
+
+    let regex = /^[A-Za-z ]+$/;
+
+    if (!regex.test(name)) {
+        alert("Name should contain only letters!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+</body>
+</html>

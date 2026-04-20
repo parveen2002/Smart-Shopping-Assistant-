@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #1e293b;
+}
+
+.navbar h1 {
+    font-size: 28px;
+}
+
+.navbar button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.control-box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    text-align: center;
+}
+
+.control-box label {
+    display: block;
+    margin-bottom: 10px;
+    color: #37e90f;
+    font-weight: bold;
+}
+
+.control-box input,
+.control-box select,
+.control-box button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+}
+
+.products-section,
+.result-section {
+    padding: 30px 40px;
+}
+
+.products-section h2,
+.result-section h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.product-card {
+    background: #1e293b;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 460px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.product-card p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #d9e4f3;
+}
+
+.product-card button {
+    margin-top: auto;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product-card button:hover {
+    background: #d9e0db;
+    transform: scale(1.05);
+}
+/* Light Mode */
+.light-mode {
+    background: #f8fafc !important;
+    color: black !important;
+}
+
+.light-mode .navbar {
+    background: #e2e8f0 !important;
+}
+
+.light-mode .hero h2,
+.light-mode .hero p,
+.light-mode .products-section h2,
+.light-mode .result-section h2,
+.light-mode .navbar h1 {
+    color: black !important;
+}
+/* Center alignment */
+.result-box {
+    background: #1e293b; /* same as control-box */
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px; /* same size like others */
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.result-box button {
+    display: block;
+    margin: 10px auto;
+}
+
+#selectedItemsList {
+    text-align: center;
+}
+
+/* Light Mode */
+.light-mode {
+    background: #f8fafc !important;
+    color: black !important;
+}
+
+.light-mode .navbar {
+    background: #e2e8f0 !important;
+}
+
+.light-mode .hero h2,
+.light-mode .hero p,
+.light-mode .products-section h2,
+.light-mode .result-section h2,
+.light-mode .navbar h1 {
+    color: black !important;
+}
+
+/* Light mode styling */
+.light-mode .control-box,
+.light-mode .product-card,
+.light-mode .result-box {
+    background: white !important;
+    color: black !important;
+}
+
+.light-mode .product-card p,
+.light-mode .control-box p,
+.light-mode .control-box label {
+    color: black !important;
+}
+
+.light-mode select,
+.light-mode input {
+    background: white !important;
+    color: black !important;
+}
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.nav-buttons button {
+    width: 240px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+    background: #22c55e;
+    transform: scale(1.03);
+}
+
+#graphResult {
+    margin-top: 10px;
+    text-align: center;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+#graphResult h3 {
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+/* Common style for both buttons */
+#downloadBtn,
+.result-box button:first-of-type {
+    width: 240px;
+    padding: 12px;
+    margin: 12px auto;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Find Best Items button (green) */
+.result-box button:first-of-type {
+    background: #22c55e;
+}
+
+.result-box button:first-of-type:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+/* Download button (blue) */
+#downloadBtn {
+    background: #3b82f6;
+}
+
+#downloadBtn:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+.product-card p:nth-of-type(1) {
+    color: #0bf241 !important;   /* Category = Yellow */
+    font-weight: bold;
+}
+
+.product-card p:nth-of-type(2) {
+    color: #08c54e !important;   /* Price = Green */
+    font-weight: bold;
+}
+
+.product-card p:nth-of-type(3) {
+    color: #46f30d !important;   /* Value = Orange */
+    font-weight: bold;
+}
+.algo-result {
+    margin: 10px 0 18px 0;
+    padding: 12px;
+    background: rgba(207, 199, 199, 0.08);
+    border-radius: 10px;
+    text-align: center;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.algo-result h3 {
+    color: #22c55e;
+    margin-bottom: 8px;
+}
+
+.algo-result p {
+    margin: 6px 0;
+}
+/* ===== FULL LIGHT MODE ===== */
+.light-mode {
+    background: #f8fafc !important;
+    color: #111827 !important;
+}
+
+/* Navbar */
+.light-mode .navbar {
+    background: #e2e8f0 !important;
+}
+
+.light-mode .navbar h1,
+.light-mode .navbar a {
+    color: #111827 !important;
+}
+
+/* Headings */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6 {
+    color: #111827 !important;
+}
+
+/* Normal text */
+.light-mode p,
+.light-mode span,
+.light-mode label,
+.light-mode li,
+.light-mode strong,
+.light-mode div {
+    color: #111827 !important;
+}
+
+/* Cards and boxes */
+.light-mode .control-box,
+.light-mode .product-card,
+.light-mode .result-box,
+.light-mode .algo-result {
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* Product values green hi rahen */
+.light-mode .value-text {
+    color: #05d816 !important;
+    font-weight: bold;
+}
+
+/* Inputs and select */
+.light-mode input,
+.light-mode select {
+    background: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Buttons */
+.light-mode button {
+    color: white;
+}
+
+/* Special buttons */
+.light-mode #themeToggle,
+.light-mode #voiceBtn,
+.light-mode .nav-buttons button {
+    color: #111827 !important;
+    background: #dbeafe !important;
+    border: 1px solid #93c5fd !important;
+}
+
+/* Result text */
+.light-mode #selectedItemsList,
+.light-mode #graphResult,
+.light-mode .algo-result p,
+.light-mode .algo-result strong {
+    color: #111827 !important;
+}
+/* ===== LIGHT MODE FINAL FIX ===== */
+
+.light-mode {
+    background: #f8fafc !important;
+    color: #111827 !important;
+}
+
+/* All text */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode p,
+.light-mode span,
+.light-mode label,
+.light-mode li,
+.light-mode strong {
+    color: #111827 !important;
+}
+
+/* Cards */
+.light-mode .product-card,
+.light-mode .control-box,
+.light-mode .result-box,
+.light-mode .algo-result {
+    background: #ffffff !important;
+    color: #111827 !important;
+}
+
+/* Navbar */
+.light-mode .navbar {
+    background: #e2e8f0 !important;
+}
+
+/* Buttons */
+.light-mode button {
+    color: white;
+}
+
+/* Special buttons */
+.light-mode #themeToggle,
+.light-mode #voiceBtn,
+.light-mode .nav-buttons button {
+    color: #111827 !important;
+    background: #dbeafe !important;
+}
+
+/* Inputs */
+.light-mode input,
+.light-mode select {
+    background: #ffffff !important;
+    color: #111827 !important;
+}
+
+/* LIGHT MODE - ALL TEXT BLACK */
+.light-mode .product-card p,
+.light-mode .product-card span,
+.light-mode .product-card strong {
+    color: #8b97b1 !important;
+}
+.product-card p {
+    color: #94a3b8;   /* label grey */
+}
+
+.product-card .value-text {
+    color: #ffffff;   /* value white */
+    font-weight: bold;
+}
+.best-pick-item {
+    background: #334155;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.light-mode .best-pick-item {
+    background: #e2e8f0;
+    color: #111827;
+    border: 2px solid #94a3b8;
+}
+
+.light-mode .best-pick-item strong {
+    color: #111827 !important;
+}
+
+/* Light mode */
+.light-mode .best-pick-item {
+    background: #e2e8f0;
+    color: black;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;   /* dark mode bg */
+    padding: 15px 20px;
+}
+.suggestion-btn {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.suggestion-btn {
+    background: #6b7280;   /* grey */
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}

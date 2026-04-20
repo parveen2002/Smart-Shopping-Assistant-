@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div style="display:flex; align-items:center; gap:12px;">
+        <img src="{{ url_for('static', filename='images/logo.png') }}"
+            alt="Smart Shopping Assistant Logo"
+            style="height:60px; width:auto;">
+            <h1>Smart Shopping Assistant</h1>
+        </div>
+        
+        <div>
+            <button id="themeToggle">🌙 Dark/Light</button>
+            <a href="/logout" style="margin-left: 10px; color: white; text-decoration: none; font-weight: bold;">Logout</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Find the Best Products Within Your Budget</h2>
+    </section>
+
+    <section class="controls">
+        <div class="control-box">
+            <label for="budgetRange">Select Budget:</label>
+            <input type="range" id="budgetRange" min="500" max="20000" value="3000" step="100">
+            <p>Budget: ₹<span id="budgetValue">3000</span></p>
+        </div>
+
+        <div class="control-box">
+            <label for="categoryFilter">Select Category:</label>
+            <select id="categoryFilter">
+                <option value="all">All</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Books">Books</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+        </div>
+
+        <div class="control-box">
+            <label>Voice Input:</label>
+            <button id="voiceBtn">🎤 Voice Input</button>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <h2 style="font-size:40px; font-weight:bold;text-align:center;">🛍️ Products 🛍️</h2>
+        <div class="products-container">
+            {% for product in products %}
+            <div class="product-card">
+                <img src="{{ url_for('static', filename=product.image) }}" alt="{{ product.name }}">
+                <h3>{{ product.name }}</h3>
+                <p>Category: <span class="value-text">{{ product.category }}</span></p>
+                <p>Price: <span class="value-text">₹{{ product.price }}</span></p>
+                <p>Value: <span class="value-text">{{ product.value }}</span></p>
+                <button onclick="addItem('{{ product.name }}', {{ product.price }}, {{ product.value }})">
+                    Add Item
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="result-section">
+        <h2>Best Selected Items</h2>
+        <div class="result-box">
+            <button onclick="findBestItems()">Find Best Items</button>
+
+            <div id="selectedItemsList">
+                <p>No items selected yet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="result-section">
+    <h2 style="margin-top: 1px;">Smart Product Suggestions</h2>
+    <div class="result-box">
+
+        <div class="nav-buttons">
+            <button class="suggestion-btn" onclick="showBFS(this)">Nearby Suggestions</button>
+            <div id="bfsResult" class="suggestion-result" style="display:none;"></div>
+
+            <button class="suggestion-btn" onclick="showDFS(this)">Smart Discovery</button>
+            <div id="dfsResult" class="suggestion-result" style="display:none;"></div>
+
+            <button class="suggestion-btn" onclick="showAnalysis(this)">Selection Bill & Analysis</button>
+            <div id="analysisResult" class="suggestion-result" style="display:none;"></div>
+        </div>
+
+        <div id="bfsResult" style="display:none;"></div>
+        <div id="dfsResult" style="display:none;"></div>
+        <div id="analysisResult" style="display:none;"></div>
+
+    </div>
+</section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

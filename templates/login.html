@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+    body {
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+        margin: 0;
+    }
+
+    .login-box {
+        background: #1e293b;
+        padding: 50px;
+        border-radius: 20px;
+        width: 400px;
+        text-align: center;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .login-box h2 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+
+    .login-box input {
+        width: 100%;
+        padding: 14px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #e2e8f0;
+    }
+
+    .login-box button {
+        width: 100%;
+        padding: 14px;
+        background: #22c55e;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+        transition: 0.3s;
+    }
+
+    .login-box button:hover {
+        background: #16a34a;
+        transform: scale(1.05);
+    }
+
+    .login-box p {
+        color: #cbd5f5;
+        margin-top: 18px;
+        font-size: 15px;
+    }
+
+    .login-box a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .login-box a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>Login</h2>
+
+    <form method="POST">
+        <input type="text" name="login_input" placeholder="Enter Email or Mobile Number" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have account? <a href="/register">Register</a></p>
+</div>
+
+</body>
+</html>
