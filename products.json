@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Running Shoes",
+    "price": 2000,
+    "value": 8,
+    "category": "Fashion",
+    "image": "images/shoes.jpg.jpg"
+  },
+  {
+    "name": "Smart Watch",
+    "price": 3000,
+    "value": 9,
+    "category": "Electronics",
+    "image": "images/watch.jpg"
+  },
+  {
+    "name": "Headphones",
+    "price": 1500,
+    "value": 7,
+    "category": "Electronics",
+    "image": "images/headphones.jpg"
+  },
+  {
+    "name": "Backpack",
+    "price": 1200,
+    "value": 6,
+    "category": "Accessories",
+    "image": "images/backpack.jpg"
+  },
+  {
+    "name": "Novel Book",
+    "price": 500,
+    "value": 5,
+    "category": "Books",
+    "image": "images/novelbook.jpg"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": 1800,
+    "value": 7,
+    "category": "Electronics",
+    "image": "images/speaker.jpg"
+  },
+  {
+    "name": "Sunglasses",
+    "price": 900,
+    "value": 6,
+    "category": "Fashion",
+    "image": "images/sunglass.jpg"
+  },
+  {
+    "name": "Laptop Bag",
+    "price": 1400,
+    "value": 7,
+    "category": "Accessories",
+    "image": "images/laptopbag.jpg"
+  },
+  {
+    "name": "Water Bottle",
+    "price": 400,
+    "value": 4,
+    "category": "Accessories",
+    "image": "images/bottle.jpg"
+  },
+  {
+    "name": "T-Shirt",
+    "price": 700,
+    "value": 5,
+    "category": "Fashion",
+    "image": "images/tshirt.jpg"
+  },
+  {
+    "name": "Power Bank",
+    "price": 1300,
+    "value": 8,
+    "category": "Electronics",
+    "image": "images/powerbank.jpg"
+  },
+  {
+    "name": "Keyboard",
+    "price": 1600,
+    "value": 7,
+    "category": "Electronics",
+    "image": "images/keyboard.jpg"
+  },
+  {
+    "name": "Mouse",
+    "price": 800,
+    "value": 6,
+    "category": "Electronics",
+    "image": "images/mouse.jpg"
+  },
+  {
+    "name": "Notebook Set",
+    "price": 350,
+    "value": 4,
+    "category": "Books",
+    "image": "images/book.jpg"
+  },
+  {
+    "name": "Casual Jacket",
+    "price": 2500,
+    "value": 8,
+    "category": "Fashion",
+    "image": "images/jacket.jpg"
+  },
+  {
+    "name": "Wireless Earbuds",
+    "price": 2200,
+    "value": 8,
+    "category": "Electronics",
+    "image": "images/earbuds.jpg"
+  },
+  {
+    "name": "Hoodie",
+    "price": 1800,
+    "value": 7,
+    "category": "Fashion",
+    "image": "images/hoodie.jpg"
+  },
+  {
+    "name": "Story Book",
+    "price": 600,
+    "value": 5,
+    "category": "Books",
+    "image": "images/storybook.jpg"
+  },
+  {
+    "name": "Tablet Stand",
+    "price": 750,
+    "value": 6,
+    "category": "Accessories",
+    "image": "images/stand.jpg"
+  },
+  {
+    "name": "Fitness Band",
+    "price": 2000,
+    "value": 8,
+    "category": "Electronics",
+    "image": "images/fitness.jpg"
+  },
+  {
+    "name": "Rich Dad Poor Dad",
+    "price": 650,
+    "value": 8,
+    "category": "Books",
+    "image": "images/richdad.jpg"
+  },
+  {
+    "name": "Atomic Habits",
+    "price": 750,
+    "value": 9,
+    "category": "Books",
+    "image": "images/atomic.jpg"
+  },
+  {
+    "name": "Think and Grow Rich",
+    "price": 550,
+    "value": 7,
+    "category": "Books",
+    "image": "images/thinkrich.jpg"
+  },
+  {
+    "name": "The Alchemist",
+    "price": 700,
+    "value": 8,
+    "category": "Books",
+    "image": "images/alchemist.jpg"
+  }
+]
